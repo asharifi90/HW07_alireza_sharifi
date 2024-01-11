@@ -5,3 +5,10 @@ CREATE TABLE IF NOT EXISTS writer(
     age int,
     book_list VARCHAR[]
     );
+
+CREATE TABLE IF NOT EXISTS book(
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255),
+    year int,
+    writer VARCHAR(255)
+)
