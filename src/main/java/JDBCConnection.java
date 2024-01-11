@@ -8,4 +8,8 @@ public class JDBCConnection {
 
     public JDBCConnection() throws SQLException {
     }
+
+    public Connection getConnection() {
+        return connection;
+    }
 }
