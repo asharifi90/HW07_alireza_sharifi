@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Author {
 
     private int id;
@@ -62,5 +64,16 @@ public class Author {
 
     public void setBookList(String[] bookList) {
         this.bookList = bookList;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", bookList=" + Arrays.toString(bookList) +
+                '}';
     }
 }
