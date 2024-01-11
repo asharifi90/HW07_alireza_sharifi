@@ -4,6 +4,7 @@ public class Book {
     private String title;
     private int year;
     private String author;
+    private int authorId;
 
     public Book() {
     }
@@ -19,6 +20,14 @@ public class Book {
         this.title = title;
         this.year = year;
         this.author = author;
+    }
+
+    public int getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(int authorId) {
+        this.authorId = authorId;
     }
 
     public int getId() {
