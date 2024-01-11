@@ -23,7 +23,7 @@ public class AuthorRepository {
 
         preparedStatement.executeUpdate();
     }
-}
+
 
     public Author load(int authorId) throws SQLException {
             Connection connection = jdbcConnection.getConnection();
@@ -32,15 +32,17 @@ public class AuthorRepository {
             PreparedStatement preparedStatement = connection.prepareStatement(loadAuthor);
             preparedStatement.setInt(1, authorId);
             ResultSet resultSet = preparedStatement.executeQuery();
-            if(resultSet.next()) {
-                String firstName = resultSet.getString("first_name");
-                String lastname = resultSet.getString("last_name");
-                int age = resultSet.getInt("age");
-                return new Author();
-            }
-            else
-                return null;
+
+        if(resultSet.next()) {
+            String firstName = resultSet.getString("first_name");
+            String lastname = resultSet.getString("last_name");
+            int age = resultSet.getInt("age");
+            Author author = new Author(firstName, lastname, age);
+            return author;
+        } else {
+            return null;
         }
+    }
 
     }
 //}
