@@ -7,4 +7,9 @@ public class AuthorService {
         AuthorRepository authorRepository = new AuthorRepository();
         authorRepository.save(author);
     }
+
+    public void loadById(int authorId) throws SQLException {
+        AuthorRepository authorRepository = new AuthorRepository();
+        Author author = authorRepository.load(authorId);;
+    }
 }
