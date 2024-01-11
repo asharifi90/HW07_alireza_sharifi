@@ -22,6 +22,12 @@ public class Book {
         this.author = author;
     }
 
+    public Book(String title, int year, int authorId) {
+        this.title = title;
+        this.year = year;
+        this.authorId = authorId;
+    }
+
     public int getAuthorId() {
         return authorId;
     }
