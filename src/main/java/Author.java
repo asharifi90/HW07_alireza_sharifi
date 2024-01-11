@@ -6,6 +6,24 @@ public class Author {
     private int age;
     private String[] bookList;
 
+    public Author() {
+    }
+
+    public Author(String firstName, String lastName, int age, String[] bookList) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.bookList = bookList;
+    }
+
+    public Author(int id, String firstName, String lastName, int age, String[] bookList) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.bookList = bookList;
+    }
+
     public int getId() {
         return id;
     }
