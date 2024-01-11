@@ -10,5 +10,6 @@ CREATE TABLE IF NOT EXISTS book(
     id SERIAL PRIMARY KEY,
     title VARCHAR(255),
     year int,
-    writer VARCHAR(255)
-)
+    writer VARCHAR(255),
+    author_id INTEGER REFERENCES author(id)
+);
