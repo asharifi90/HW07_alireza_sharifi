@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS writer(
+CREATE TABLE IF NOT EXISTS author(
    id SERIAL PRIMARY KEY,
    first_name VARCHAR(255),
     last_name VARCHAR(255),
