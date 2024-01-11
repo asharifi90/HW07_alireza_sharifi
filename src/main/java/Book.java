@@ -5,6 +5,14 @@ public class Book {
     private int year;
     private String author;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getTitle() {
         return title;
     }
