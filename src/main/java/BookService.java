@@ -7,4 +7,10 @@ public class BookService {
         BookRepository bookRepository = new BookRepository();
         bookRepository.save(book);
     }
+
+    public void loadById(int bookId) throws SQLException {
+        BookRepository bookRepository = new BookRepository();
+        Book book = bookRepository.load(bookId);
+    }
+
 }
